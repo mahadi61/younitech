@@ -1,0 +1,80 @@
+name: F Deployment
+
+on:
+  push:
+    branches:
+      - main 
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the repository
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    # Set up Docker
+    - name: Set up Docker
+      uses: docker/setup-buildx-action@v2
+
+    # Build Docker Image
+    - name: Build Docker Image
+      run: |
+        docker build -t figma-development:latest -f Dockerfile .
+
+    # Save Docker Image as tar file
+    # - name: Save Docker Image
+    #   run: |
+    #     docker save mmm_backend_ordering:latest > mmm_backend_ordering.tar
+
+    # # Upload the Docker Image tar to GitHub Actions artifacts
+    # - name: Upload Docker Image
+    #   uses: actions/upload-artifact@v3
+    #   with:
+    #     name: mmm_backend_ordering-image
+    #     path: mmm_backend_ordering.tar
+
+
+  update-code:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+            
+    steps:
+        # Checkout the repository
+    - name: Checkout Code
+      uses: actions/checkout@v3
+    
+     # Update to the server using SSH
+    - name: Update code to Server
+      uses: appleboy/ssh-action@v0.1.10
+      with:
+       host: ${{ secrets.SSH_HOST }}
+       username: ${{ secrets.SSH_USER }}
+       key: ${{ secrets.SSH_PRIVATE_KEY }}
+       script: |
+         # Stop and remove existing container
+         echo "${{ secrets.PROJECT_DIR }}"
+         cd "${{ secrets.PROJECT_DIR }}"
+         sudo ./update-code.bash
+
+
+  deploy:
+    needs: update-code
+    runs-on: ubuntu-latest
+            
+    steps:
+        # Checkout the repository
+    - name: Checkout Code
+      uses: actions/checkout@v3
+    
+     # Update to the server using SSH
+    - name: Deploy to Server
+      uses: appleboy/ssh-action@v0.1.10
+      with:
+       host: ${{ secrets.SSH_HOST }}
+       username: ${{ secrets.SSH_USER }}
+       key: ${{ secrets.SSH_PRIVATE_KEY }}
+       script: |
+         # Stop and remove existing container
+         cd "${{ secrets.PROJECT_DIR }}"
+         sudo ./build-and-deploy.bash

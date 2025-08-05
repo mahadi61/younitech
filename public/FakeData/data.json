@@ -1,0 +1,136 @@
+
+
+[
+    {
+      "id": 1,
+      "image": "../assets/Article.png",
+      "title": "Strak en modern thema, perfect voor digitale bureaus en startups.",
+      "description": "This is a description for card 1.",
+      "list": [
+        "One Click Demo Installation",
+         "03+ Homepages version",
+         "03+ Blog page ready-made styles",
+        "06+ Single Product layout styles",
+        "03+ pre-made Header styles",
+        "03+ pre-made Footer styles"
+      ],
+      "buttonText": "Kies thema",
+          "order_summary": {
+        "monthly_price": "49,99 €/Maand ",
+        "duration": "12 maanden",
+        "tax_included": true,
+        "one_time_payment": true,
+        "tax": {
+          "rate": "21%",
+          "monthly_amount": "25 €/Maand "
+        },
+        "total": "500 €"
+      }
+
+    },
+    {
+      "id": 2,
+      "image": "../assets/Article (1).png",
+      "title": "Professioneel en stijlvol ontwerp, ideaal voor zakelijke portfolio's en corporate websites.",
+      "description": "This is a description for card 2.",
+      "list": [
+      "03+ Homepages version",
+      "03+ Blog page ready-made styles",
+       "06+ Single Product layout styles",
+       "03+ pre-made Header styles",
+       "03+ pre-made Footer styles"
+      ],
+      "buttonText": "Kies thema",
+      "order_summary": {
+      "monthly_price": "49,99 €/Maand",
+      "duration": "12 maanden",
+      "tax_included": true,
+      "one_time_payment": true,
+      "tax": {
+        "rate": "21%",
+        "monthly_amount": "25 €/Maand "
+      },
+      "total": "500 €"
+    }
+    },
+    {
+      "id": 3,
+      "image": "../assets/Article (2).png",
+      
+      "title": "Gedurfd en dynamisch thema, geweldig voor creatieve bureaus en mediabedrijven",
+      "description": "This is a description for card 3.",
+      "list": [
+            "One Click Demo Installation",
+            "03+ Homepages version",
+            "03+ Blog page ready-made styles",
+            "06+ Single Product layout styles",
+            "03+ pre-made Header styles",
+            "03+ pre-made Footer styles"
+      ],
+      "buttonText": "Kies thema",
+      "order_summary": {
+    "monthly_price": "49,99 €/Maand",
+    "duration": "12 maanden",
+    "tax_included": true,
+    "one_time_payment": true,
+    "tax": {
+      "rate": "21%",
+      "monthly_amount": "25 €/Maand "
+    },
+    "total": "500 €"
+  }
+    },
+    {
+      "id": 4,
+      "image": "../assets/Article (3).png",
+     
+      "title": "Verfijnd en elegant design, geschikt voor high-end services en luxe merken",
+      "description": "This is a description for card 4.",
+      "list": [
+      "One Click Demo Installation",
+      "03+ Homepages version",
+      "03+ Blog page ready-made styles",
+      "06+ Single Product layout styles",
+      "03+ pre-made Header styles",
+      "03+ pre-made Footer styles"
+      ],
+      "buttonText": "Kies thema",
+      "order_summary": {
+    "monthly_price": "49,99 €/Maand",
+    "duration": "12 maanden",
+    "tax_included": true,
+    "one_time_payment": true,
+    "tax": {
+      "rate": "21%",
+      "monthly_amount": "25 €/Maand"
+    },
+    "total": "500 €"
+  }
+    },
+    {
+      "id": 5,
+      "image": "../assets/Article (4).png",
+      "title": "Clean en minimalistisch thema, perfect voor persoonlijke portfolio’s en freelancers",
+      "description": "This is a description for card 5.",
+      "list": [
+      "03+ Homepages version",
+       "03+ Blog page ready-made styles",
+       "06+ Single Product layout styles",
+       "03+ pre-made Header styles",
+       "03+ pre-made Footer styles"
+      ],
+      "buttonText": "Kies thema",
+      "order_summary": {
+    "monthly_price": "49,99 €/Maand",
+    "duration": "12 maanden",
+    "tax_included": true,
+    "one_time_payment": true,
+    "tax": {
+      "rate": "21%",
+      "monthly_amount": "25 €/Month after first year"
+    },
+    "total": "500 €"
+  }
+    }
+  ]
+  
